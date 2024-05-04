@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-bus",
+      "2": "I-bus",
+      "3": "L-bus",
+      "4": "U-bus",
+      "5": "B-from_location",
+      "6": "I-from_location",
+      "7": "L-from_location",
+      "8": "U-from_location",
+      "9": "B-to_location",
+      "10": "I-to_location",
+      "11": "L-to_location",
+      "12": "U-to_location",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-bus": 1,
+      "I-bus": 2,
+      "L-bus": 3,
+      "U-bus": 4,
+      "B-from_location": 5,
+      "I-from_location": 6,
+      "L-from_location": 7,
+      "U-from_location": 8,
+      "B-to_location": 9,
+      "I-to_location": 10,
+      "L-to_location": 11,
+      "U-to_location": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

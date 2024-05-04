@@ -1,0 +1,168 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: find_route
+  examples: |
+    - Give me directions for the travel
+    - I want to get a travel route
+    - can you suggest a travel route
+    - I want to travel
+    - travel directions
+    - directions
+    - best route
+
+#- intent: inform_from_location
+#  examples: |
+#    - [51.231,-0.223](from_location)
+#    - from [51.501,-0.123](from_location)
+#    - My starting point is [51.507,-0.127](from_location)
+#    - starting from [51.704, -0.272](from_location)
+#
+#- intent: inform_to_location
+#  examples: |
+#    - to location is [51.412,-0.325](to_location)
+#    - I'm going to [51.501,-0.123](to_location)
+#    - My destination is [51.401,-0.141](to_location)
+#    - destination is [51.014, -0.419](to_location)
+#    - to [51.231,-0.322]
+
+- intent: bus
+  examples: |
+    - bus
+    - I prefer the bus
+    - Take the bus
+    - Bus please
+
+- intent: tube
+  examples: |
+    - tube
+    - I prefer the tube
+    - Take the tube
+    - tube please
+
+- intent: tram
+  examples: |
+    - tram
+    - I prefer the tram
+    - Take the tram
+    - Tram please
+
+- intent: LeastInterchange
+  examples: |
+    - I prefer Least interchange
+    - least interchanging option
+    - least number of chnages in transport
+
+- intent: LeastTime
+  examples: |
+    - I prefer the fastest route
+    - I prefer the least time consuming route
+    - show me the fastest route
+    - fastest route
+    - fastest option
+
+- intent: LeastWalking
+  examples: |
+    - I prefer walking least
+    - least wlaking route
+    - show me a route that doesn't require much walking
+    - route with least walking
+
+- intent: any
+  examples: |
+    - I don't have any journey preference
+
+- intent: via
+  examples: |
+    - I want to travel via 
+    - via location
+    - via

@@ -1,0 +1,158 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - find_route
+  - inform_from_location
+  - inform_to_location
+  - LeastInterchange
+  - LeastTime
+  - LeastWalking
+  - via
+  - any
+  - bus
+  - tube
+  - tram
+
+entities:
+  - from_location
+  - to_location
+  - transport
+
+slots:
+
+  journey_preference:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_intent
+      value: "LeastInterchange"
+      intent: LeastInterchange
+    - type: from_intent
+      value: "LeastTime"
+      intent: LeastTime
+    - type: from_intent
+      value: "LeastWalking"
+      intent: LeastWalking
+    - type: from_intent
+      value: "any"
+      intent: any
+  public_transport_type:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_intent
+      value: "bus"
+      intent: bus
+    - type: from_intent
+      value: "tube"
+      intent: tube
+    - type: from_intent
+      value: "tram"
+      intent: tram
+    - type: from_intent
+      value: "any"
+      intent: any
+  inform_from_location:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: location_form
+          requested_slot: inform_from_location
+
+
+  inform_to_location:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: location_form
+          requested_slot: inform_to_location
+
+  via_location:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: location_form
+          requested_slot: via_location
+
+forms:
+  location_form:
+    required_slots:
+      - journey_preference
+      - public_transport_type
+      - inform_from_location
+      - inform_to_location
+      - via_location
+
+
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_ask_via_location:
+  - text: "Would you like to travel via a location? give coorinates if yes"
+
+  utter_ask_inform_from_location:
+  - text: "What is the from location?"
+
+  utter_ask_inform_to_location:
+  - text: "What is the to location?"
+
+  utter_ask_journey_preference:
+  - text: "What is your journey preference??"
+    buttons:
+      - title: "Least Interchange between transport"
+        payload: "LeastInterchange"
+      - title: "Least time taken / fastest route"
+        payload: "LeastTime"
+      - title: "Least walking route"
+        payload: "LeastWalking"
+      - title: "I don't have any journey preferences"
+        payload: "any"
+  utter_ask_public_transport_type:
+  - text: "What type of public transport would you like?"
+    buttons:
+      - title: "Bus"
+        payload: "bus"
+      - title: "Tube"
+        payload: "tube"
+      - title: "Tram"
+        payload: "tram"
+      - title: "I don't have any public transport preferences"
+        payload: "any"
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://imgur.com/t/cats/BzHfPZh"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+- action_say_from

@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-from_location",
+      "2": "I-from_location",
+      "3": "L-from_location",
+      "4": "U-from_location",
+      "5": "B-to_location",
+      "6": "I-to_location",
+      "7": "L-to_location",
+      "8": "U-to_location",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-from_location": 1,
+      "I-from_location": 2,
+      "L-from_location": 3,
+      "U-from_location": 4,
+      "B-to_location": 5,
+      "I-to_location": 6,
+      "L-to_location": 7,
+      "U-to_location": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]
